@@ -1,14 +1,19 @@
 # 컴퓨터 구조
+
 ## 수업 정보
+
 * 교수님: 오상엽 교수님.
 * 교재: Practical Computer Architecture 오상엽 저.
 * 학기: 1학년 2학기, 2020년도 2학기 수강.
+
 ## 논리회로(Logic Circuit)
+
 * 2진수를 전기적으로 표현하고 처리하는 회로.
 * 주로 반도체 사용.
     * 그 중에서 트랜지스터를 주로 사용.
 
 ### Transister
+
 * transfer of signal through a varister
     * varister: variable register
 * 신호 전송(전압과 전류의 흐름 조절)
@@ -21,6 +26,7 @@
     * 이상 전압: surge.
 
 #### 논리 회로 구현에 사용하는 방법
+
 1. TTL(Transister Transister Logic)
     * NAND 사용.
     * 가장 많이 사용됨.
@@ -35,12 +41,14 @@
     * 속도가 느리고 소비전력이 적음.
 
 #### 논리회로 매개 평가 변수
+
 1. fan out: 표준 게이트 출력에 가하는 표준 부하의 수.
 1. power disipation(소비 전력): 게이트에서 소비되는 전력.
 1. propagation delay(전파 지연): 게이트에서 사용하는 시간.
 1. Noise margin: 노이즈 허용 마진.
 
 #### 논리 게이트
+
 * AND
     * ![AND](https://upload.wikimedia.org/wikipedia/commons/6/64/AND_ANSI.svg)
     * 위키미디어, 퍼블릭 도메인.
@@ -56,4 +64,51 @@
 * NAND를 이용한 NOT
     * ![NOTWithNAND](./NOTWithNAND.jpg)
     * 직접 그림.
+* NAND를 이용한 AND
+    * ![ANDWithNAND](./ANDWithNAND.jpg)
+    * 직접 그림.
+* NAND를 이용한 OR
+    * ![ORWithNAND](./ORWithNAND.jpg)
+    * 직접 그림.
+    * (A' ^ B')' = A + B
+
+## 부울대수(Boolean Algebra)
+
+2진 논리 변수에 대한 간소화 작업
+
+### 불대수의 법칙
+
+* 불대수의 기본 법칙
+
+|X ~ n|X ~ X|
+|:---:|:---:|
+|X + 0 = X|X * X = X|
+|X + 1 = 1|X + X = X|
+|X * 1 = X|X + X' = 1|
+|X * 0 = 0|X * X' = 0|
+
+* 교환, 분배, 결합법칙
+
+|법칙|X ~ Y ~ Z|
+|:---:|:---:|
+|교환법칙|X + Y = Y + X|
+|분배법칙|X * (Y + Z) = XY + XZ|
+|결합법칙|X + (Y + Z) = (X + Y) + Z|
+
+* 드 모르간의 법칙
+    * (X * Y)' = X' + Y'
+    * (X + Y)' = X'Y'
+
+### 간소화
+
+```
+X + (YZ) = (X + Y)(X + Z)
+= XX + XZ + XY + YZ
+= X + XZ + XY + YZ
+= X(1 + Y + Z) + YZ
+= X + YZ
+```
+#### 논리회로의 간소화
+
+
 
