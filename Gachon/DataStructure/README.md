@@ -105,3 +105,81 @@ bit -> byte -> field -> record -> file -> Database
     * 2byte : Half word
     * 4byte : Full word
     * 8byte : Double word.
+
+### 3월 10일
+
+#### 데이터의 표현
+
+1. Database
+    * file vs DB
+        * file: 사용자 관리
+        * DB: 소프트웨어가 관리
+    * 어느 특정 조직의 응용 업무에 공동 사용하기 위해 ***여러 파일들***의 중복성(redundancy)을 최소화하여 하나의 파일로 구성해놓은 것.
+    * DBMS(DB Management System)에 의해 관리되는 데이터의 단위.
+        * DBMS의 역할
+            1. 정의
+            1. 조작
+            1. 제어
+1. Block단위
+    * 주기억장치와 보조기억장치간 전송 단위.
+    * DMA(Direct Memory Access)에서 사용.
+
+#### 컴퓨터 내에서 데이터의 표현
+
+##### 조직도
+
+* 데이터
+    * 수
+        * 정수
+            * 이진 정수 표현법
+                * signed magnitude(부호와 절댓값)
+                * 1's complement
+                * 2's complement
+            * 십진 정수 표현법
+                * pack format
+                * zone format
+        * 실수
+            * 64 bias
+            * 128 bias
+            * 127 bias
+    * 문자
+        * ASCII
+        * EBCDIC
+        * Unicode
+
+##### 각각의 설명
+
+* fixed point number(정수) 이진 표기.
+    * 양수는 모두 공통.
+    * signed magnitude(부호와 절댓값)
+        * 0번 비트 sign bit.
+        * sign bit 제외 양수와 동일.
+        * +0, -0 존재.
+        * n bit 표현시 -(2^(n-1) - 1) ~ 2^(n-1) - 1
+        * 예
+            * +14: 0000 1110, -14: 1000 1110
+            * +0: 0000 0000, -0: 1000 0000
+    * 1's complement
+        * +0, -0 존재.
+        * 음수는 1의 보수로 표현.
+        * 사인비트 오버플로우시 1을 더해야 함.
+        * n bit 표현시 -(2^(n-1) - 1) ~ 2^(n-1) - 1
+        * 예
+            * +14: 0000 1110, -14: 1111 0001
+            * +0: 0000 0000, -0: 1111 1111
+    * 2's complement
+        * 음수는 2의 보수로 표현.
+* 10진 정수
+    * IBM 대형 기종 사용.
+    * EBCDIC코드 지원.
+    * pack format
+        * 연산 가능, 출력 불가.
+        * 1byte에 10진 정수 2자리를 표현.
+        * 최우측 바이트의 digit 부분에는 부호가 표현.
+            * 양수: 0xA, **0xC**, 0xE, **0xF**
+            * 음수: 0xB, 0xD
+    * zone format
+        * 연산 불가, 출력 가능.
+        * 1바이트에 10진 정수 1자리를 표현.
+        * 최우측 바이트의 zone 부분에는 부호가 표현.
+        * 최우측 바이트 제외 나머지의 zone 영역에는 0xF가 들어감.
