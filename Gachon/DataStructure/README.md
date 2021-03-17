@@ -217,3 +217,28 @@ bit -> byte -> field -> record -> file -> Database
             * 0xC370A000
 
 * 포인터는 C에서 %p로 출력.
+
+### 3월 17일
+
+#### 알고리즘.
+
+* 문제를 해결하기 위한 단계적인 절차와 과정을 의사코드로 표현.
+* 알고리즘의 5대 조건
+    * 입력
+    * 출력
+    * 명확성
+    * 유한성
+    * 실제성
+* 알고리즘 분석을 위해 time complexity, space complexity를 사용.
+* 시간 복잡도는 특정 문제 해결을 위한 알고리즘 수행시 사용되는 연산의 빈도수를 차수(degree)로 표현.
+    * 분석을 위해 O-notation, Ω-notation, Θ-notation
+    * O(1) < O(log n) < O(n) < O(n log n) < O(n^2) < O(2^n) < O(n!) < O(n^m)
+        * O(n^2)까지를 다항시간(polinomial time), O(2^n) 이후를 지수시간(exponential time)이라 한다.
+    * O-notaion: 연산차수가 가장 높은 것을 계산 차수로 표현.
+    * Ω-notation: 연산 차수가 가장 낮은 것을 계산 차수로 표현.
+    * Θ-notation: O-notation과 Ω-notation과의 교집합. 최적 알고리즘.
+
+-----
+
+* 순서도, NS차트, Hipo, Unified Modeling Language, mnemonic language
+
