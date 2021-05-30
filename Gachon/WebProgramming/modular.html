@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <script>
+        var lhs = prompt("왼쪽 피연산자 입력.");
+        var rhs = prompt("오른쪽 피연산자 입력.");
+        function calc(lhs, rhs, oper)
+        {
+            lhs = parseInt(lhs);
+            rhs = parseInt(rhs);
+            var retval = 0;
+            switch(oper)
+            {
+                case '+':
+                //return lhs + rhs;
+                retval = lhs + rhs;
+                break;
+                case '-':
+                //return lhs - rhs;
+                retval = lhs + rhs;
+                break;
+                case '*':
+                //return lhs * rhs;
+                retval = lhs + rhs;
+                break;
+                case '/':
+                if (rhs == 0)
+                {
+                    console.log("Error! Divide by zero");
+                    document.write("Error! Divide by zero<br>");
+                    //return 0;
+                }
+                //return lhs / rhs;
+                else retval = lhs + rhs;
+                break;
+                case '%':
+                if (rhs == 0)
+                {
+                    console.log("Error! Divide by zero");
+                    document.write("Error! Divide by zero<br>");
+                    //return 0;
+                }
+                //return lhs % rhs;
+                retval = lhs + rhs;
+                break;
+                default:
+                console.log("Error! Wrong operator");
+                document.write("Error! Wrong operator<br>");
+                //return 0;
+            }
+            document.write(lhs + ' ' + oper + ' ' + rhs + ' = ' + retval + "<br>");
+            return retval;
+        }
+/*
+        function show(lhs, rhs, oper)
+        {
+            document.write(lhs + ' ' + oper + ' ' + rhs + ' = ' + calc(lhs, rhs, oper) + "<br>");
+        }
+        */
+    </script>
+    <body>
+        <button type="button" onclick="calc(lhs, rhs, '+')">+</button>
+        <button type="button" onclick="calc(lhs, rhs, '-')">-</button>
+        <button type="button" onclick="calc(lhs, rhs, '*')">*</button>
+        <button type="button" onclick="calc(lhs, rhs, '/')">/</button>
+        <button type="button" onclick="calc(lhs, rhs, '%')">%</button>
+    </body>
+</html>

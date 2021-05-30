@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <script>
+        var a = prompt("첫 번째 숫자를 입력하세요.");
+        var b = prompt("두 번째 숫자를 입력하세요.");
+        function bigger(lhs, rhs)
+        {
+            return lhs > rhs ? lhs : rhs;
+        }
+        function smaller(lhs, rhs)
+        {
+            return lhs < rhs ? lhs : rhs;
+        }
+        function printBigger(lhs, rhs)
+        {
+            document.write("큰 값은 " + bigger(lhs, rhs) + "입니다.");
+        }
+        function printSmaller(lhs, rhs)
+        {
+            document.write("작은 값은 " + smaller(lhs, rhs) + "입니다.");
+        }
+    </script>
+    <button type="button" onclick="printBigger(a, b)">큰 값</button>
+    <button type="button" onclick="printSmaller(a, b)">작은 값</button>
+    </body>
+</html>

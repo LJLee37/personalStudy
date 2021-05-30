@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head><title>js practice</title></head>
+    <body>
+    <script>
+        var num1 = Math.floor(Math.random() * 9) + 1;
+        var num2 = Math.floor(Math.random() * 9) + 1;
+document.write(num1 + "은(는) " + (num1 >= 5 ? "큰 " : "작은 ") + "값이며, " + num2 + "은(는) " + (num2 >= 5 ? "큰 " : "작은 ") + "값입니다.<br>");
+        var isBig1, isBig2;
+        if (num1 >= 5) isBig1 = "큰 "; else isBig1 = "작은 ";
+        if (num2 >= 5) isBig2 = "큰 "; else isBig2 = "작은 ";
+        document.write(num1 + "은(는) " + isBig1 + "값이며, " + num2 + "은(는) " + isBig2 + "값입니다.");
+    </script>
+    </body>
+</html>

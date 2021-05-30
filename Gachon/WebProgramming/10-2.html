@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head><title>onclick</title></head>
+    <body>
+    <script>
+        var yourName = prompt("학생 이름을 입력하시오.");
+        var age = prompt("나이를 입력하시오.");
+        function printMessage(myName, age)
+        {
+            document.write("학생 이름 : <b>" + name + "</b><br>");
+            document.write("학생 나이 : <b>" + age + "</b><br>");
+        }
+    </script>
+    <button type="button" onclick="printMessage(yourName, age)">학생 정보</button>
+    </body>
+</html>
