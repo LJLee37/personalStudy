@@ -1,0 +1,76 @@
+body
+{
+    background: rgb(16,16,16);
+    color: white;
+}
+nav
+{
+    font: bold 20px white sans-serif;
+}
+h2
+{
+    animation-name: biggerToSmaller;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+    animation-duration: 3s;
+}
+#nav
+{
+    font-size: 30px;
+}
+@keyframes biggerToSmaller
+{
+    from
+    {
+        font-size: 500%;
+    }
+    to
+    {
+        font-size: 200%;
+    }
+}
+ul
+{
+    list-style-type: none;
+}
+ul li:before
+{
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-size: 20px;
+    background-image: url("./images/JewelSample5.png");
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+.frame
+{
+    width: 32%;
+    height: 500px;
+}
+img
+{
+    background: white;
+}
+.border
+{
+    border: solid darkgreen;
+}
+.frameImg
+{
+    height: 80px;
+}
+.frameImg:hover
+{
+    transform: scale(1.2, 1.2);
+}
+.mainImg
+{
+    -webkit-transition: background-color 3s;
+    transition: background-color 3s;
+}
+.mainImg:hover
+{
+    background-color: grey;
+}

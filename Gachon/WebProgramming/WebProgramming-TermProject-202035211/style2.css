@@ -1,0 +1,10 @@
+table, td
+{
+    border: 1px solid;
+}
+body
+{
+    background: rgb(16,16,16);
+    color: white;
+}
+

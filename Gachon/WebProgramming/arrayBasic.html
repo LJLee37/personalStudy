@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <script>
+        var i = 0
+        var li = []
+        while(true)
+        {
+            var temp = prompt("숫자를 입력하세요.");
+            if (temp == -999)
+                break;
+            li[i] = temp;
+            i++;
+        }
+        function printArray(arr)
+        {
+            for (var j = 0; j < i; ++j)
+                document.write("arr[" + j + "] = " + arr[j] + "<br>");
+        }
+        printArray(li);
+    </script>
+    </body>
+</html>

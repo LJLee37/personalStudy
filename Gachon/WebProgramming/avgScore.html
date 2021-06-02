@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+    <body>
+    <script>
+        var scores = [];
+        function InputArr()
+        {
+            for (var i = 0; i < 5; ++i)
+            {
+                scores[i] = parseInt(prompt("성적을 입력하세요."));
+            }
+        }
+        function AvgArr()
+        {
+            var s = 0
+            for (var i = 0; i < 5; ++i)
+                s += scores[i];
+            return s / 5;
+        }
+        InputArr();
+        var result = AvgArr();
+        function printAvg()
+        {
+            document.write("평균 : " + result + "<br>");
+        }
+        printAvg();
+    </script>
+    </body>
+</html>
