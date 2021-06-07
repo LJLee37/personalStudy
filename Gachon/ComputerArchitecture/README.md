@@ -62,13 +62,13 @@
     * ![NOT](https://upload.wikimedia.org/wikipedia/commons/9/9f/Not-gate-en.svg)
     * 위키미디어, 퍼블릭 도메인.
 * NAND를 이용한 NOT
-    * ![NOTWithNAND](./NOTWithNAND.jpg)
+    * ![NOTWithNAND](./images/NOTWithNAND.jpg)
     * 직접 그림.
 * NAND를 이용한 AND
-    * ![ANDWithNAND](./ANDWithNAND.jpg)
+    * ![ANDWithNAND](./images/ANDWithNAND.jpg)
     * 직접 그림.
 * NAND를 이용한 OR
-    * ![ORWithNAND](./ORWithNAND.jpg)
+    * ![ORWithNAND](./images/ORWithNAND.jpg)
     * 직접 그림.
     * (A' ^ B')' = A + B
 
