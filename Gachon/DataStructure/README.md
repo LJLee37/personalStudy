@@ -242,3 +242,45 @@ bit -> byte -> field -> record -> file -> Database
 
 * 순서도, NS차트, Hipo, Unified Modeling Language, mnemonic language
 
+## 대충 정리
+
+### 리스트
+
+* [링크드 리스트](#링크드-리스트)
+    * [싱글 링크드 리스트](#싱글-링크드-리스트)
+    * [더블 링크드 리스트](#더블-링크드-리스트)
+
+#### 링크드 리스트
+
+각 노드는 자신의 이전/다음 노드의 포인터를 가짐. 배열에 비해 삽입/삭제에 유리, 탐색에 불리.
+
+각 노드의 포인터 개수에 따라 싱글 링크드 리스트와 더블 링크드 리스트로 나뉨.
+
+헤드 포인터와 현재 커서 포인터가 필요.
+
+##### 싱글 링크드 리스트
+
+각 노드는 다음 노드의 포인터만을 가짐. 적절한 이용을 위해 커서 외에 이전 노드의 포인터를 추가로 가지는 경우 존재.
+
+```cpp
+//singleLinkedList.h
+#ifndef SINGLE_LINKED_LIST_H
+#define SINGLE_LINKED_LIST_H
+template<typename T>
+class singleNode
+{
+protected:
+    T _data;
+    singleNode* _next;
+public:
+    singleNode(T data);
+    ~single();
+    const T& data = _data;
+    const singleNode*& next = _next;
+    
+};
+```
+
+### 스택
+
+LIFO(Last In First Out)구조. 가장 기본적인 자료형중 하나.

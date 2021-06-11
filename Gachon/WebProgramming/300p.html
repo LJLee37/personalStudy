@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>별 문자 출력하기</h2>
+        <hr>
+    <script>
+        var starCount = parseInt(prompt("정수를 입력하세요"));
+        if (isNaN(starCount) || starCount < 1)
+            document.write("입력 오류입니다.");
+        else
+            for (var i = 0; i < starCount; ++i)
+                document.write("*".repeat(i + 1) + "<br>");
+    </script>
+    </body>
+</html>
+
